@@ -158,21 +158,44 @@ h3{
     font-size:90%;
     line-height:145%;
 }
-.meals-showcase{
-    list-style: none;
-    width:100%;
+.section-meals {
+    padding: 0;
 }
-.meals-showcase li{
-    display: block;
-    float:left;
-    width:25%;
-}
-.meal-photo{
-    width:100%;
-    margin:0 ;   
-}
-.meal-photo img{
-    width:100%;
-    height:auto;
 
+/* BOTH ULs = grid rows */
+.meals-showcase {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0;
+    padding: 0;
+}
+
+/* each image box */
+.meals-showcase li {
+    width: 100%;
+    height: 250px;          /* IMPORTANT: equal height */
+    overflow: hidden;
+}
+
+/* figure */
+.meal-photo {
+    width: 100%;
+    height: 100%;
+}
+
+/* image fix */
+.meal-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;      /* 🔥 MAIN FIX */
+    display: block;
+    opacity: 0.8;
+    transition: transform 0.4s, opacity 0.4s;
+}
+
+/* hover effect */
+.meal-photo img:hover {
+    transform: scale(1.05);
+    opacity: 1;
 }
