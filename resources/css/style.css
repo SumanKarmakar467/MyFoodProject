@@ -193,6 +193,14 @@ h3{
     opacity: 0.8;
     transition: transform 0.4s, opacity 0.4s;
 }
+.clearfix {zoom:1}
+.clearfix::after{
+    content:'.';
+    clear:both;
+    display: block;
+    height:0;
+    visibility:hidden;
+}
 
 /* hover effect */ 
 .meal-photo img:hover {
@@ -215,6 +223,7 @@ h3{
 }
 .works-step{
     margin-bottom: 50px;
+    margin-right: 25px;;
 }
 
 .steps-box:first-child{
@@ -240,4 +249,16 @@ h3{
     padding:5px;
     float:left;
     font-size:150%;
+}
+.works-step:last-of-type{
+    margin-bottom: 80px;
+}
+.btn-app img{
+    height:50px;
+    width:auto;
+    margin-right:10px;
+
+}
+.section-steps{
+    background-color: #f4f4f4;
 }
