@@ -194,8 +194,26 @@ h3{
     transition: transform 0.4s, opacity 0.4s;
 }
 
-/* hover effect */
+/* hover effect */ 
 .meal-photo img:hover {
     transform: scale(1.05);
     opacity: 1;
+}
+
+.works-step{
+    margin-bottom: 50px;
+}
+
+.steps-box:first-child{
+    text-align:center;
+    padding-right:3%;
+    margin-top: 30px;
+}
+.steps-box:last-child{
+    padding-left:3%;
+    margin-top: 70px;
+}
+.app-screen{
+    width:40%;
+    
 }
