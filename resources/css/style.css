@@ -335,7 +335,8 @@ a:active{
 .testomonial-grid blockquote {
     margin: 0;
     font-style: italic;
-    line-height: 1.6;
+    line-height: 145%;
+    position: relative;
 }
 
 .testomonial-grid cite {
@@ -343,14 +344,37 @@ a:active{
     align-items: center;
     margin-top: 20px;
     font-style: normal;
+    font-size:90%;
 }
 
 .testomonial-grid cite img {
     width: 100px;
     height: 100px;
-    border-radius: 10%;
+    border-radius: 50%;
     margin-right: 10px;
     object-fit: cover;
+    vertical-align: middle;
+}
+blockquote:before{
+    content:'\201c';
+    font-size:500%;
+    display: block;
+    position:absolute;
+    top:0;
+    left:-3px;
+}
+.container-plan{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:40px;
+}
+.section-plans{
+    background-color: #f4f4f4;
+}
+.plan-box{
+    background-color: #fff;
+    border-radius: 5px;
+    width:90%
 }
 
 
