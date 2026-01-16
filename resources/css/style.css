@@ -312,7 +312,7 @@ a:active{
     background-image: linear-gradient(
         rgba(0, 0, 0, 0.8),
         rgba(0, 0, 0, 0.8)
-    ), url(resources/img/back-customers.jpg);
+    ), url("resources/img/background-custo.webp");
     background-size: cover;
     color: #fff;
     background-attachment: fixed;
@@ -345,8 +345,9 @@ a:active{
 .testomonial-grid cite img {
     width: 100px;
     height: 100px;
-    border-radius: 50%;
+    border-radius: 10%;
     margin-right: 10px;
+    object-fit: cover;
 }
 
 
