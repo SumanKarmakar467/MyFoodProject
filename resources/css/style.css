@@ -496,9 +496,71 @@ input[type="submit"] :hover{
 .footer-nav-section{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    align-items: start;
+}
+footer{
+    background-color: #333;
+    font-size: 80%;
+    padding:50px;
+}
+.footer-nav{
+    list-style: none;
+}
+.footer-nav li, 
+.social-links li{
+    display: inline-block;
+    margin-right: 20px;
+}
+.footer-nav li:last-child, 
+.social-links li:last-child{
+    margin:0;
+}
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited{
+    color: #888;
+    text-decoration: none;
+    border:0;
+    transition: color 0.2s;
+}
+.footer-nav li a:hover,
+.footer-nav li a:hover{
+    color: #ddd;
 }
 
+.social-links{
+    list-style: none;
+    justify-self: end;
+}
+.social-links ion-icon{
+    font-size: 22px;
+    color: #888;
+    cursor:pointer;
+}
+.copy-right{
+    color: #888;
+    text-align: center;
+    margin-top: 30px;
+    font-size:90%;
+}
+.fb:hover{
+    color: #3b5998;
+}
+.google:hover{
+    color: #dd4b39;
+}
+.twitter:hover{
+    color: #00aced;
+}
+.insta:hover{
+    color: #517fa4;
+}
 
+.social-links li a:link,
+.social-links li a:visited{
+    font-size:160%;
+}
 
 
 
