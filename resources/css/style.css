@@ -270,7 +270,7 @@ h3{
     justify-content: center;
     width: 100%;
     height: 220px;         
-    object-fit: cover;     /* crops image without distortion */
+    object-fit: cover;     
     border-radius: 5px;              /* center inside 1140px */
 }
 .box img{
