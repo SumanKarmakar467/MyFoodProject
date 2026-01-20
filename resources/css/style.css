@@ -269,7 +269,7 @@ h3{
     grid-template-columns: repeat(4, 1fr); 
     justify-content: center;
     width: 100%;
-    height: 220px;          /* fixed height (adjust if needed) */
+    height: 220px;         
     object-fit: cover;     /* crops image without distortion */
     border-radius: 5px;              /* center inside 1140px */
 }
