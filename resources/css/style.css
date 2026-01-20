@@ -177,7 +177,7 @@ h3{
 
 .meals-showcase li {
     width: 100%;
-    height: 250px;          /* IMPORTANT: equal height */
+    height: 250px;         
     overflow: hidden;
 }
 
