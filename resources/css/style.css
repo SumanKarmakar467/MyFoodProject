@@ -305,7 +305,7 @@ a:active{
     border-bottom:1px solid transparent;
     transition:border-bottom 0.2s, color 0.5s;
 }
-/* testimonial section */
+
 .section-testimonials {
     background-image: linear-gradient(
         rgba(0, 0, 0, 0.8),
