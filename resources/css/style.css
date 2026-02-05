@@ -3,6 +3,11 @@
     padding:0;
     box-sizing: border-box;
 }
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 html,body{
     background-color: #ffffff;
     color: #555;
@@ -11,21 +16,31 @@ html,body{
     font-size: 20px;
     text-rendering: optimizeLegibility;
     overflow-x: hidden;
+    width: 100%;
 }
-.row{
-    max-width:1140px;
-    margin:0 auto;
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
 }
-header{
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('img/hero-image.jpg');
-    height:100vh;
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/hero-image.jpg');
+    height: 100vh;
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
 }
-h1{
-    margin-top:0;
+
+nav {
+    width: 100%;
+}
+
+h1 {
+    margin-top: 0;
     margin-bottom: 20px;
-    padding:0;
+    padding: 0;
     color: #fff;
     font-size: 240%;
     font-weight: 300;
@@ -33,12 +48,11 @@ h1{
     letter-spacing: 1px;
     word-spacing: 3px;
 }
-.hero-text-box{
-    position:absolute;
-    width:1140px;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,50%);
+
+.hero-text-box {
+    margin: auto;
+    width: 1140px;
+    max-width: 90%;
 }
 .btn:link,
 .btn:visited,
@@ -65,12 +79,14 @@ input[type=submit]{
 }
 .btn:hover,
 .btn:active,
-input[type=submit]{
+input[type=submit]:hover {
     background-color: #cf6d17;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 .btn-full:hover,
 .btn-full:active,
-input[type=submit]{
+input[type=submit]:hover {
     border:1px solid #cf6d17;
     color: white;
 }
@@ -138,7 +154,7 @@ h2:after{
 }
 .content{
     display:grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap:30px;
     max-width:1140px;
     margin:0 auto;
@@ -172,22 +188,24 @@ h3{
     list-style: none;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    margin: 0;
+    width: 80%;
+    margin: 0 auto;
     padding: 0;
+    background-color: #fff;
 }
 
 .meals-showcase li {
-    width: 100%;
-    height: 250px;         
     overflow: hidden;
+    background-color: #fff;
+    border: 2px solid #fff;
+    aspect-ratio: 4/3;
 }
-
 
 .meal-photo {
     width: 100%;
     height: 100%;
+    margin: 0;
 }
-
 
 .meal-photo img {
     width: 100%;
@@ -255,11 +273,39 @@ h3{
 .works-step:last-of-type{
     margin-bottom: 80px;
 }
-.btn-app img{
-    height:50px;
-    width:auto;
-    margin-right:10px;
+.app-buttons-container {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
 
+.btn-app:link,
+.btn-app:visited {
+    border: 0;
+    transition: transform 0.2s;
+    text-decoration: none;
+}
+
+.btn-app img {
+    height: 45px;
+    width: auto;
+    max-width: 140px;
+    transition: transform 0.2s, filter 0.2s;
+    vertical-align: middle;
+    border-radius: 6px;
+    object-fit: contain;
+    background-color: #000;
+}
+
+/* Removing specific play-store height override as it's now handled by the general rule */
+
+.btn-app:hover img {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+.btn-app:active img {
+    transform: scale(0.98);
 }
 .section-steps{
     background-color: #f4f4f4;
@@ -268,11 +314,9 @@ h3{
 .section-cities .row:last-child {
     display: grid;
     grid-template-columns: repeat(4, 1fr); 
+    gap: 20px;
     justify-content: center;
     width: 100%;
-    height: 220px;         
-    object-fit: cover;     
-    border-radius: 5px;              
 }
 .box img{
     width:100%;
@@ -374,11 +418,16 @@ blockquote:before{
 }
 .plan-box{
     background-color: #fff;
-    border-radius: 5px;
+    border-radius: 10px;
     overflow: hidden;
-    
     display: flex;
     flex-direction: column;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.plan-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 .plan-box div{
     padding:20px;
@@ -446,46 +495,75 @@ h2 {
 }
 
 .contact-form {
-    width: 60%;
+    width: 100%;
+    max-width: 800px;
     margin: 0 auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
 .form-row {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 2.5fr;
     align-items: center;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
 }
 
 .form-row label {
-    font-size: 16px;
-    font-weight: bold;
+    font-size: 18px;
+    font-weight: 400;
 }
 
-.form-row input,
+.form-row input[type="text"],
+.form-row input[type="email"],
 .form-row select,
 .form-row textarea {
     width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    font-size: 16px;
+    background-color: #f9f9f9;
 }
 
-input[type="checkbox"] {
-    
-    width: auto;
+.form-row input:focus,
+.form-row select:focus,
+.form-row textarea:focus {
+    outline: none;
+    border-color: #e67e22;
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgba(230, 126, 34, 0.1);
+}
+
+.form-row input[type="checkbox"] {
+    justify-self: start;
+    width: 20px;
+    height: 20px;
+    accent-color: #e67e22;
+}
+
+.form-row:last-child {
+    margin-bottom: 0;
+    margin-top: 10px;
 }
 
 input[type="submit"] {
-    display: inline-block;
-    padding:10px 30px;
-    text-decoration: none;
-    font-weight: 300;
-    border-radius: 200px;
-    transition: background-color 0.2s,border 0.2, color 0.2s;
+    background-color: #e67e22;
+    color: #fff;
+    border: 1px solid #e67e22;
+    padding: 12px 40px;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.3s;
 }
-input[type="submit"] :hover{
+
+input[type="submit"]:hover {
     background-color: #cf6d17;
+    border-color: #cf6d17;
 }
 .footer-nav-section{
     display: grid;
