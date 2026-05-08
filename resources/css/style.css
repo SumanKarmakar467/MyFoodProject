@@ -84,6 +84,16 @@ input[type=submit]:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
+
+.btn:focus-visible,
+input[type=submit]:focus-visible,
+.main-nav li a:focus-visible,
+.footer-nav li a:focus-visible,
+.social-links li a:focus-visible {
+    outline: 3px solid #e67e22;
+    outline-offset: 3px;
+    border-radius: 4px;
+}
 .btn-full:hover,
 .btn-full:active,
 input[type=submit]:hover {
@@ -632,6 +642,14 @@ footer{
 .social-links li a:link,
 .social-links li a:visited{
     font-size:160%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
 }
 
 
