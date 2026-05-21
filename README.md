@@ -8,7 +8,7 @@ A food-themed static website built with HTML and CSS. Showcases a clean UI for b
 ## 🛠️ Tech Stack
 - HTML5
 - CSS3
-- Third-party CSS libraries (vendors)
+- Third-party CSS libraries (vendos)
 
 ## ✨ Features
 - Responsive food listing layout
