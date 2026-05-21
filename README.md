@@ -1,6 +1,6 @@
 # 🥗 MyFoodProject
 
-A food-themed static website built with HTML and CSS. Showcases a clean UI for browsing food categories and items with a modern laout.
+A food-themed static website built with HTML and CSS. Showcases a clean UI for browsing food categories and items with a modern layout.
 
 ## 🔗 Live Demo
 [sumankarmakar-food-project.vercel.app](https://sumankarmakar-food-project.vercel.app/)
