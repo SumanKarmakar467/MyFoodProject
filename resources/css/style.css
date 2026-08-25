@@ -18,6 +18,28 @@ html,body{
     overflow-x: hidden;
     width: 100%;
 }
+
+.skip-link {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    z-index: 1000;
+    transform: translateY(-150%);
+    background-color: #fff;
+    color: #e67e22;
+    padding: 10px 16px;
+    border-radius: 4px;
+    font-weight: 400;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.skip-link:focus {
+    transform: translateY(0);
+    outline: 3px solid #e67e22;
+    outline-offset: 3px;
+}
+
 .row {
     max-width: 1140px;
     margin: 0 auto;
