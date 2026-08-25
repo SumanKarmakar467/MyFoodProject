@@ -1,21 +1,27 @@
-# 🥗 MyFoodProject
+# My Food Project
 
-A food-themed static website built with HTML and CSS. Showcases a clean UI for browsing food categories and items with a modern layout.
+A responsive food delivery landing page built with HTML and CSS. The site highlights meal subscriptions, delivery benefits, city availability, customer testimonials, pricing, and a contact form.
 
-## 🔗 Live Demo
+## Live Demo
+
 [sumankarmakar-food-project.vercel.app](https://sumankarmakar-food-project.vercel.app/)
 
-## 🛠️ Tech Stack
+## Tech Stack
+
 - HTML5
 - CSS3
-- Third-party CSS libraries (vendors)
+- Normalize.css
+- Custom responsive grid styles
+- AOS scroll animations
+- Ionicons
 
-## ✨ Features
-- Responsive food listing layout
-- Clean card-based UI
-- Organized category sections
+## Features
 
-## 🚀 Run Locally
-```bash
-# Open index.html directly in any browser
-```
+- Responsive hero, meals, cities, testimonials, plans, and form sections
+- Optimized image loading with lazy loading and async decoding
+- Accessible form labels and visible focus styles
+- Reduced-motion support for visitors who prefer less animation
+
+## Run Locally
+
+Open `index.html` directly in a browser. No build step is required.
