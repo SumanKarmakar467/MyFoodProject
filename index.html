@@ -105,8 +105,8 @@
                     <p>You are done start ordering</p>
                 </div>
                 <div class="app-buttons-container">
-                    <a href="#" class="btn-app" id="play-store"><img src="resources/img/app-store.png" alt="app-store"></a>
-                    <a href="#" class="btn-app"><img src="resources/img/app-store-logo.png" alt="app-store-logo"></a>
+                    <a href="#" class="btn-app" id="play-store" aria-label="Download from Google Play"><img src="resources/img/app-store.png" alt="Get it on Google Play"></a>
+                    <a href="#" class="btn-app" aria-label="Download from the App Store"><img src="resources/img/app-store-logo.png" alt="Download on the App Store"></a>
                 </div>
             </div>
         </div>
@@ -301,21 +301,21 @@
 
                 <div class="form-row">
                     <label for="name">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your name" required>
+                    <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name" required>
                 </div>
 
                 <div class="form-row">
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    <input type="email" id="email" name="email" placeholder="Your email" autocomplete="email" required>
                 </div>
 
                 <div class="form-row">
                     <label for="find-us">How did you find us?</label>
                     <select id="find-us" name="find-us">
-                        <option>Friends</option>
-                        <option>Search Engine</option>
-                        <option>Advertisement</option>
-                        <option>Others</option>
+                        <option value="friends">Friends</option>
+                        <option value="search">Search engine</option>
+                        <option value="advertisement">Advertisement</option>
+                        <option value="other">Other</option>
                     </select>
                 </div>
 
@@ -326,12 +326,12 @@
 
                 <div class="form-row">
                     <label for="message">Drop a line</label>
-                    <textarea id="message" name="message" rows="5"></textarea>
+                    <textarea id="message" name="message" rows="5" placeholder="Tell us what you need"></textarea>
                 </div>
 
                 <div class="form-row">
                     <label>&nbsp;</label>
-                    <input type="submit" value="Send me">
+                    <input type="submit" value="Send message">
                 </div>
 
             </form>
