@@ -1,4 +1,4 @@
-# My Food Project
+# My Food Project :-
 
 A responsive food delivery landing page built with HTML and CSS. The site highlights meal subscriptions, delivery benefits, city availability, customer testimonials, pricing, and a contact form.
 
